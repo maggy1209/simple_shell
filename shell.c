@@ -1,15 +1,14 @@
 #include "shell.h"
 
 /**
- * main - simple shell replication
- * @argc: argument count
+ * main -@argc: argument count
  * @argv: argument vector
  * @env: the environment
  * Return: 0
  */
 int main(int argc, char **argv, char **env)
 {
-	char *prompt = ">>> ";
+	char *prompt = "shell>> ";
 	char *line = NULL;
 	char **args = NULL;
 	int i = 0, status = 0, arg_num = 0;
