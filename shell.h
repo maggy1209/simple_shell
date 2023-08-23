@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
@@ -233,3 +234,7 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
+=======
+#include <stdio.h>
+#include <stdlib.h>
+>>>>>>> 7341904afd95db0cad295ac9444b89971ab64912
