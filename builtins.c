@@ -6,7 +6,7 @@
  * @args: parsed arguments
  * @env: environment
  * @ex_st: exit status
- * Return: Null
+ * Return: void
  */
 
 void builtins(char *line, char **args, char **env, int *ex_st)
