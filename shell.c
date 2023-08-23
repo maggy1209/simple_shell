@@ -1,19 +1,19 @@
 #include "shell.h"
+
 int main()
 {
   char cmd[MAX_CMD_LEN];
-  int status;
-  char *prompt = "(Eshell) $ ";
-  char *lineptr;
-  size_t n = 0;
+  char *args[MAX_CMD_LEN / 2];
+  int i, status;
+
   while (1) {
-    printf("sheep_shell>");
+    printf("shell>");
     fgets(cmd, MAX_CMD_LEN, stdin);
-// Check for end of file
+   // Check for end of file
     if (cmd[0] == '\n') {
       break;
     }
-// Fork a child process to execute the command
+   // Fork a child process to execute the command
     pid_t pid = fork();
     if (pid == 0) {
       execvp(cmd, NULL);
@@ -22,8 +22,6 @@ int main()
     } else {
       waitpid(pid, &status, 0);
     }
+  }
+  return 0;
 }
-  return (0);
-}
-
-
