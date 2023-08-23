@@ -8,7 +8,7 @@ int main() {
   int pid;
 
   // Display the prompt
-  printf("enter command$ ");
+  printf("simple_shell$ ");
 
   // Read the command from the user
   command = fgets(NULL, 0, stdin);
@@ -37,7 +37,7 @@ int main() {
   waitpid(pid, NULL, 0);
 
   // Display the prompt again
-  printf("enter command$ ");
+  printf("simple_shell$ ");
 
   return 0;
 }
