@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
@@ -44,6 +43,7 @@ extern char **environ;
  * @str: a string
  * @next: points to the next node
  */
+
 typedef struct liststr
 {
 	int num;
@@ -73,6 +73,7 @@ typedef struct liststr
  * @readfd: the fd from which to read line input
  * @histcount: the history line number count
  */
+
 typedef struct passinfo
 {
 	char *arg;
@@ -234,7 +235,3 @@ int replace_vars(info_t *);
 int replace_string(char **, char *);
 
 #endif
-=======
-#include <stdio.h>
-#include <stdlib.h>
->>>>>>> 7341904afd95db0cad295ac9444b89971ab64912
