@@ -41,6 +41,7 @@ extern char **environ;
  * @str: str1
  * @next: next node pointer
  */
+
 typedef struct liststr
 {
 	int num;
@@ -101,6 +102,7 @@ typedef struct passinfo
  * @type: cmd flag
  * @func: prototype
  */
+
 typedef struct builtin
 {
 	char *type;

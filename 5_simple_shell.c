@@ -1,29 +1,28 @@
 #include "shell.h"
 
 /**
- * _eputs - displays input string
+ * _eputs - display input string
  * @str: string to print
  * Return: Null
  */
 
 void _eputs(char *str)
 {
-	int i = 0;
+	int k = 0;
 
 	if (!str)
 		return;
-	while (str[i] != '\0')
+	while (str[k] != '\0')
 	{
-		_eputchar(str[i]);
-		i++;
+		_eputchar(str[k]);
+		k++;
 	}
 }
 
 /**
  * _eputchar - write the char c to stderr
  * @c: char to print
- * Return: return 1 if successful
- * On error, return -1
+ * Return: return 1 for success, -1 for error
  */
 
 int _eputchar(char c)
@@ -45,8 +44,7 @@ int _eputchar(char c)
  * _putfd - input the char c to given fd
  * @c: the char to print
  * @fd: fd to write to
- * Return: 1 if succesful
- * On error, return -1 if successful
+ * Return: 1 for success, -1 for error
  */
 
 int _putfd(char c, int fd)
@@ -73,13 +71,13 @@ int _putfd(char c, int fd)
 
 int _putsfd(char *str, int fd)
 {
-	int i = 0;
+	int k = 0;
 
 	if (!str)
 		return (0);
 	while (*str)
 	{
-		i += _putfd(*str++, fd);
+		k += _putfd(*str++, fd);
 	}
-	return (i);
+	return (k);
 }

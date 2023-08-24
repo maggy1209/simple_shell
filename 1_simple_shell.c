@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * interactive - return true if shell is interactive mode
+ * interactive - return true if shell is in interactive mode
  * @info: struct address
- * Return: 1 if interactive mode
+ * Return: 1 if in interactive mode
  */
 
 int interactive(info_t *info)
@@ -12,7 +12,7 @@ int interactive(info_t *info)
 }
 
 /**
- * is_delim - check if character is a delimeter
+ * is_delim - check if  character is a delimeter
  * @c: the char to check
  * @delim: the delimeter string
  * Return: 1 if true
@@ -48,19 +48,19 @@ int _isalpha(int c)
 
 int _atoi(char *s)
 {
-	int i, sign = 1, flag = 0, output;
+	int k, sign = 1, flag = 0, output;
 	unsigned int result = 0;
 
-	for (i = 0; s[i] != '\0' && flag != 2; i++)
+	for (k = 0; s[k] != '\0' && flag != 2; k++)
 	{
-		if (s[i] == '-')
+		if (s[k] == '-')
 			sign *= -1;
 
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[k] >= '0' && s[k] <= '9')
 		{
 			flag = 1;
 			result *= 10;
-			result += (s[i] - '0');
+			result += (s[k] - '0');
 		}
 		else if (flag == 1)
 			flag = 2;
